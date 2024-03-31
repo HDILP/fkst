@@ -10,13 +10,14 @@ txt = txt1 + txt2
 txt3 = []
 txt4 = []
 
-# for i in txt:
-#     j = re.findall(r'\d', i)
-#     txt3.extend(j)
-#
+for i in txt:
+    j = re.findall(r'\'(.*?)\':', i)
+    txt3.extend(j)
+# 拿下！！！！！！！！
+
 # for i in txt:
 #     j = re.findall(r'\d\d', i)
 #     txt4.extend(j)
-#
+
 # txt = txt3 + txt4
-print(txt)
+print(txt3)
