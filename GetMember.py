@@ -89,19 +89,20 @@ def SendPost():
     return missing
 
 
-# 获取当前时间
-current_time = datetime.now()
-
-# 格式化并打印当前时间
-formatted_time = current_time.strftime('%Y-%m-%d %H:%M:%S')
 while 1:
     NonePlace = SendPost()  # 获取空白位置
     if not NonePlace:
-        time.sleep(5)
+        time.sleep(3)
     else:
-        print("当前时间是:", formatted_time)
+        # 获取当前时间
+        current_time = datetime.now()
+        # 格式化并打印当前时间
+        formatted_time = current_time.strftime('%Y-%m-%d %H:%M:%S *****')
+
+        print("*****发现小推车空位！当前时间是:", formatted_time)
+        print('空位：')
         print(NonePlace)
-        time.sleep(5)
+        time.sleep(3)
 
     # if 1 in NonePlace:  # 判断1号位是否空白
     #     PutMember.PutMember()  # 推
